@@ -22,9 +22,9 @@ namespace nyms.resident.server
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-/*            HttpConfiguration config = GlobalConfiguration.Configuration;
+            HttpConfiguration config = GlobalConfiguration.Configuration;
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;*/
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
         }
     }
 }
