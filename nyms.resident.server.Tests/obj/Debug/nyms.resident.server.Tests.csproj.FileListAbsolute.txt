@@ -322,3 +322,6 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bi
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\Dapper.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\Dapper.xml
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\System.Web.Http.Cors.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\System.Web.Cors.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server.Tests\bin\Debug\System.Web.Http.Cors.xml

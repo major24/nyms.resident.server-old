@@ -126,8 +126,8 @@ namespace nyms.resident.server.DataProviders.Impl
                     dp.Add("username", userName, DbType.String, ParameterDirection.Input, 60);
 
                     conn.Open();
-                    var result = conn.QuerySingleAsync<User>(sql, dp); 
-                    return Task.FromResult(result.Result);
+                    var result = conn.QueryFirstOrDefault<User>(sql, dp); 
+                    return Task.FromResult(result);
                 }
             }
             catch (SqlException ex)

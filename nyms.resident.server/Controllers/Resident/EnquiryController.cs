@@ -1,4 +1,5 @@
 ﻿using nyms.resident.server.Filters;
+using nyms.resident.server.Models;
 using nyms.resident.server.Services.Impl;
 using nyms.resident.server.Services.Interfaces;
 using System;
@@ -9,25 +10,32 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
-namespace nyms.resident.server.Controllers.Enquiry
+namespace nyms.resident.server.Controllers
 {
     [UserAuthenticationFilter]
     public class EnquiryController : ApiController
     {
         private readonly IUserService _userService;
+        private readonly IEnquiryService _enquiryService;
 
-        public EnquiryController(IUserService userService)
+        public EnquiryController(IUserService userService, IEnquiryService enquiryService)
         {
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            _enquiryService = enquiryService ?? throw new ArgumentNullException(nameof(enquiryService));
         }
 
         // GET: api/Enquiry
-        [Route("api/enquires/active")]
-        public IEnumerable<string> Get()
+        [Route("api/carehomes/enquires")]
+        public IHttpActionResult GetAllEnquires()
         {
             var u = HttpContext.Current.User.Identity.Name;
 
-            return new string[] { "value1 enq1", "value2 enq2", u };
+            var enquires = _enquiryService.GetAll();
+
+            if (enquires == null)
+                return NotFound();
+
+            return Ok(enquires.ToArray());
         }
 
         // GET: api/Enquiry/5

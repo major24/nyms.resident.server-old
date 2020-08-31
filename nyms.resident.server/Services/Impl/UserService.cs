@@ -1,5 +1,6 @@
 ﻿using Microsoft.Ajax.Utilities;
 using nyms.resident.server.DataProviders.Interfaces;
+using nyms.resident.server.Filters;
 using nyms.resident.server.Models;
 using nyms.resident.server.Services.Interfaces;
 using System;
@@ -10,6 +11,7 @@ using System.Web;
 
 namespace nyms.resident.server.Services.Impl
 {
+    [UserAuthenticationFilter]
     public class UserService : IUserService
     {
         private readonly IUserDataProvider _userDataProvider;

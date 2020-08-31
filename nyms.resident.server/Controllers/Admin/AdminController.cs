@@ -31,7 +31,7 @@ namespace nyms.resident.server.Controllers.Admin
 
         [HttpPut]
         [Route("api/admin/user/setpassword")]
-        public IHttpActionResult SetPassword([FromBody] User user)
+        public IHttpActionResult SetPassword([FromBody] Models.User user)
         {
             // validate user is [Admin]...
             

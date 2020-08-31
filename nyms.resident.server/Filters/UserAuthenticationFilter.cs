@@ -70,7 +70,7 @@ namespace nyms.resident.server.Filters
                 }
                 
                 IPrincipal identityUser = new ClaimsPrincipal(identity.Result);
-                context.Principal = identityUser;      //principal.Result;
+                context.Principal = identityUser;
             }
 
         }

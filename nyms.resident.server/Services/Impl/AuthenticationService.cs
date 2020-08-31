@@ -29,15 +29,6 @@ namespace nyms.resident.server.Services.Impl
 
         public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest)
         {
-            /*// test bcrypt
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword("Pa$$w0rd");
-            bool verified = BCrypt.Net.BCrypt.Verify("Pa$$w0rd", passwordHash);
-            bool verified1 = BCrypt.Net.BCrypt.Verify("Pa$$w0rd1", passwordHash);
-
-
-            var user = _userService.GetByRefereneId(new Guid("E82B2306-9927-4E42-A1FF-1983041FAE34")).Result;
-            bool verified22 = BCrypt.Net.BCrypt.Verify("Pa$$w0rd", user.Password);
-*/
             // get user with user name pwd
             var userExists = _userService.GetUserByUserNamePassword(authenticationRequest.UserName, authenticationRequest.Password).Result;  //_authenticationRepository.EnsureValidUser(model.UserName, model.Password);
             if (userExists == null) return null;
@@ -56,10 +47,9 @@ namespace nyms.resident.server.Services.Impl
             // pwd is valid. get user
             var user = _userService.GetByRefereneId(userExists.ReferenceId).Result;
             user.Password = string.Empty;
+            // var user = _userService.GetCareHomeUser(userExists.ReferenceId).Result;
 
             return new AuthenticationResponse(user, _jwtService.GenerateJWTToken(user.ForeName, user.ReferenceId.ToString())); //, GenerateJwtRefreshToken(user));
-
-
         }
 
         public bool ValidateToken(string token)

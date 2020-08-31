@@ -408,3 +408,7 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debu
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.pdb
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.xml
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Cors.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.xml
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.csprojAssemblyReference.cache
