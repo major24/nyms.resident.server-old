@@ -25,10 +25,11 @@ namespace nyms.resident.server.Models.Core
 
         private HttpResponseMessage Execute()
         {
+
             HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.Unauthorized)
             {
                 RequestMessage = Request,
-                ReasonPhrase = ReasonPhrase
+                ReasonPhrase = ReasonPhrase,
             };
 
             return response;

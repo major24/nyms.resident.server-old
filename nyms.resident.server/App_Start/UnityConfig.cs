@@ -22,6 +22,8 @@ namespace nyms.resident.server
             container.RegisterType<IAuthenticationService, AuthenticationService>();
             container.RegisterType<IUserDataProvider, UserDataProvider>(new InjectionConstructor(connectionString));
             container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IEnquiryDataProvider, EnquiryDataProvider>(new InjectionConstructor(connectionString));
+            container.RegisterType<IEnquiryService, EnquiryService>();
 
             container.RegisterType<ICareHomeDataProvider, CareHomeDataProvider>(new InjectionConstructor(connectionString));
             container.RegisterType<ICareHomeService, CareHomeService>();

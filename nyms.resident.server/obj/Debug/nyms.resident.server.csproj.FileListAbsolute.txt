@@ -349,6 +349,7 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Syst
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Xml.XPath.XDocument.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Antlr3.Runtime.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\BCrypt.Net-Next.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.IdentityModel.Logging.dll
@@ -363,7 +364,9 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Syst
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Security.Cryptography.Cng.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Cors.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Helpers.dll
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.WebHost.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Mvc.dll
@@ -379,6 +382,7 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Unit
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\WebActivatorEx.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\WebGrease.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\BCrypt.Net-Next.xml
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.IdentityModel.Logging.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Microsoft.IdentityModel.Tokens.xml
@@ -388,6 +392,7 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Syst
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Numerics.Vectors.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Newtonsoft.Json.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Net.Http.Formatting.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Helpers.xml
@@ -406,9 +411,4 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Micr
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.csproj.CopyComplete
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.pdb
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.dll
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Dapper.xml
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Cors.dll
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.dll
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\System.Web.Http.Cors.xml
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.csprojAssemblyReference.cache

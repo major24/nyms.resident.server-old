@@ -1,6 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -22,12 +23,11 @@ namespace nyms.resident.server.Services.Core
                 Subject = new ClaimsIdentity(new[]
                         {
                             new Claim(ClaimTypes.Name, referenceId),
-                            // new Claim("ReferenceId", referenceId),
                             new Claim("ForeName", name)
                         }),
 
                 Expires = now.AddMinutes(Convert.ToInt32(expire_in_Minutes)),
-
+                Issuer = ConfigurationManager.AppSettings["jwtIssuer"],
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(symmetric_Key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -52,8 +52,10 @@ namespace nyms.resident.server.Services.Core
                 var validationParameters = new TokenValidationParameters()
                 {
                     RequireExpirationTime = true,
-                    ValidateIssuer = false,
+                    ValidateIssuer = true,
                     ValidateAudience = false,
+                    ValidIssuer = ConfigurationManager.AppSettings["jwtIssuer"],
+                    //ClockSkew = ze
                     IssuerSigningKey = new SymmetricSecurityKey(symmetricKey)
                 };
 

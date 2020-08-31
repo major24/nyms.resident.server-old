@@ -9,9 +9,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace nyms.resident.server.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     [UserAuthenticationFilter]
     public class EnquiryController : ApiController
     {
@@ -38,10 +40,19 @@ namespace nyms.resident.server.Controllers
             return Ok(enquires.ToArray());
         }
 
-        // GET: api/Enquiry/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/enquires/{referenceId}")]
+        public IHttpActionResult GetEnquiryByReferenceId(string referenceId)
         {
-            return "value";
+            // add validateon
+            var u = HttpContext.Current.User.Identity.Name;
+
+            var enquiry = _enquiryService.GetByReferenceId(new Guid(referenceId)).Result;
+
+            if (enquiry == null)
+                return NotFound();
+
+            return Ok(enquiry);
         }
 
         // POST: api/Enquiry

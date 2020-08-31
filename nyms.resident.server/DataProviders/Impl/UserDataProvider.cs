@@ -54,6 +54,7 @@ namespace nyms.resident.server.DataProviders.Impl
                     string sql = @"SELECT id as id, reference_id as referenceid, fore_name as forename, sur_name as surname
                                     FROM [users]
                                     WHERE reference_id = @referenceid";
+
                     DynamicParameters dp = new DynamicParameters();
                     dp.Add("referenceid", referenceId, DbType.Guid, System.Data.ParameterDirection.Input, 60);
 

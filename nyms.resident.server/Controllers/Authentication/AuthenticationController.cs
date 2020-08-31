@@ -31,14 +31,6 @@ namespace nyms.resident.server.Controllers
             if (response == null)
                 return BadRequest("Username or password is incorrect");
 
-            // var x = Json<AuthenticationResponse>(response);
-            // return Ok(x);
-            // Newtonsoft.Json.JsonConvert()
-            /*            var j = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-                        var jj = JsonConvert.SerializeObject(response, Formatting.Indented, j);*/
-            //return Json(response, JsonRequestBehavior.AllowGet);
-
-
             return Ok(response);
         }
 

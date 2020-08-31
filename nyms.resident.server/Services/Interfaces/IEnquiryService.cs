@@ -11,5 +11,6 @@ namespace nyms.resident.server.Services.Interfaces
     public interface IEnquiryService
     {
         IEnumerable<Enquiry> GetAll();
+        Task<Enquiry> GetByReferenceId(Guid referenceId);
     }
 }

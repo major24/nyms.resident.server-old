@@ -56,7 +56,7 @@ namespace nyms.resident.server.Filters
 
             if (identity == null)
             {
-                context.ErrorResult = new AuthFailureResult("Invalid JWT Token", request);
+                context.ErrorResult = new AuthFailureResult("Invalid Identity in JWT Token", request);
             }
             else
             {
@@ -66,13 +66,12 @@ namespace nyms.resident.server.Filters
                 var role = user.CareHomeRoles.Where(r => r.RoleName == "Admin" || r.RoleName == "Manager").FirstOrDefault();
                 if (role == null)
                 {
-                    context.ErrorResult = new AuthFailureResult($"Access denied for {user.ForeName}", request);
+                    context.ErrorResult = new AuthFailureResult($"Role Missing: Access denied for {user.ForeName}", request);
                 }
                 
                 IPrincipal identityUser = new ClaimsPrincipal(identity.Result);
                 context.Principal = identityUser;
             }
-
         }
 
         public Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
