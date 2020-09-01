@@ -1,10 +1,6 @@
 ﻿using nyms.resident.server.Filters;
 using nyms.resident.server.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -33,7 +29,7 @@ namespace nyms.resident.server.Controllers.User
             Guid _referenceId = new Guid(referenceId);
             var user = _userService.GetByRefereneId(_referenceId).Result;
             if (user == null)
-                return NotFound(); //NotFound($"User not found for the provided id {referenceId}");
+                return NotFound();
 
             return Ok(user);
         }
@@ -50,7 +46,7 @@ namespace nyms.resident.server.Controllers.User
             Guid _referenceId = new Guid(referenceId);
             var user = _userService.GetCareHomeUser(_referenceId).Result;
             if (user == null)
-                return NotFound(); //NotFound($"User not found for the provided id {referenceId}");
+                return NotFound();
 
             return Ok(user);
         }
@@ -65,9 +61,9 @@ namespace nyms.resident.server.Controllers.User
             }
 
             Guid _referenceId = new Guid(referenceId);
-            var user = new Models.User() { }; // _userService.GetUserWithRolesByRefereneId(_referenceId);
+            var user = new Models.User() { };
             if (user == null)
-                return NotFound(); // ($"User not found for the provided id {referenceId}");
+                return NotFound();
 
             return Ok(user);
         }

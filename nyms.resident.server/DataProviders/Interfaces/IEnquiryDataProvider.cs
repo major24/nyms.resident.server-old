@@ -1,5 +1,4 @@
 ﻿using nyms.resident.server.Models;
-using nyms.resident.server.Models.Resident;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

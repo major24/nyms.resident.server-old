@@ -411,4 +411,3 @@ C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\bin\Micr
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.csproj.CopyComplete
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.dll
 C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.pdb
-C:\Users\major\Documents\temp\nyms.resident.server\nyms.resident.server\obj\Debug\nyms.resident.server.csprojAssemblyReference.cache

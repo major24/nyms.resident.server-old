@@ -220,7 +220,6 @@
     <Compile Include="Controllers\Resident\CareHomeController.cs" />
     <Compile Include="Controllers\Resident\EnquiryController.cs" />
     <Compile Include="Controllers\User\UsersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Core\Constants.cs" />
     <Compile Include="DataProviders\Impl\CareHomeDataProvider.cs" />
     <Compile Include="DataProviders\Impl\EnquiryDataProvider.cs" />

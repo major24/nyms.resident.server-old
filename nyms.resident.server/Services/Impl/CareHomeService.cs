@@ -3,8 +3,6 @@ using nyms.resident.server.Models;
 using nyms.resident.server.Services.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace nyms.resident.server.Services.Impl
 {

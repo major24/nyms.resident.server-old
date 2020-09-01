@@ -3,11 +3,8 @@ using nyms.resident.server.Services.Core;
 using nyms.resident.server.Services.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace nyms.resident.server.Services.Impl
 {
@@ -47,7 +44,6 @@ namespace nyms.resident.server.Services.Impl
             // pwd is valid. get user
             var user = _userService.GetByRefereneId(userExists.ReferenceId).Result;
             user.Password = string.Empty;
-            // var user = _userService.GetCareHomeUser(userExists.ReferenceId).Result;
 
             return new AuthenticationResponse(user, _jwtService.GenerateJWTToken(user.ForeName, user.ReferenceId.ToString())); //, GenerateJwtRefreshToken(user));
         }
@@ -78,7 +74,6 @@ namespace nyms.resident.server.Services.Impl
 
         public Task<ClaimsIdentity> GetClaimsIdentity(string token)
         {
-            string username;
             string refId;
             var simplePrinciple = _jwtService.GetPrincipal(token);
             if (simplePrinciple == null)
@@ -92,14 +87,11 @@ namespace nyms.resident.server.Services.Impl
             var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, refId)
-                    //new Claim("ReferenceId", refId)
                     // you can add more claims if needed like Roles ( Admin or normal user or something else)
                 };
 
             identity = new ClaimsIdentity(claims, "Jwt");
             return Task.FromResult(identity);
-            // IPrincipal user = new ClaimsPrincipal(identity);
-            //return Task.FromResult(user);
         }
 
         public Task<User> GetUserByRefereneId(Guid referenceId)

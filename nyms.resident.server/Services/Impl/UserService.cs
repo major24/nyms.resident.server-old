@@ -1,13 +1,9 @@
-﻿using Microsoft.Ajax.Utilities;
-using nyms.resident.server.DataProviders.Interfaces;
+﻿using nyms.resident.server.DataProviders.Interfaces;
 using nyms.resident.server.Filters;
 using nyms.resident.server.Models;
 using nyms.resident.server.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace nyms.resident.server.Services.Impl
 {
@@ -23,10 +19,6 @@ namespace nyms.resident.server.Services.Impl
         public  Task<User> GetById(int id)
         {
             throw new NotImplementedException();
-/*            var user = _userDataProvider.GetById(id).Result;
-            //new User() { ForeName = "Major", SurName = "Nalliah" };
-            // return Task.FromResult(u);
-            return Task.FromResult(user);*/
         }
 
         public Task<User> GetByRefereneId(Guid referenceId)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -32,14 +32,14 @@ namespace nyms.resident.server.Tests.Controllers
         [TestMethod]
         public void GetById()
         {
-/*            // Arrange
+*//*            // Arrange
             ValuesController controller = new ValuesController();
 
             // Act
             string result = controller.Get(5);
 
             // Assert
-            Assert.AreEqual("value", result);*/
+            Assert.AreEqual("value", result);*//*
         }
 
         [TestMethod]
@@ -79,3 +79,4 @@ namespace nyms.resident.server.Tests.Controllers
         }
     }
 }
+*/

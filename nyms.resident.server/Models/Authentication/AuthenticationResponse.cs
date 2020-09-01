@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using nyms.resident.server.Models;
+﻿using System.Collections.Generic;
 
 namespace nyms.resident.server.Models
 {

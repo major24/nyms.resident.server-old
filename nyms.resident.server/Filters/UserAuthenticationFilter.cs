@@ -1,20 +1,13 @@
-﻿using Microsoft.Ajax.Utilities;
-using Microsoft.SqlServer.Server;
-using nyms.resident.server.Models;
-using nyms.resident.server.Models.Core;
-using nyms.resident.server.Services.Core;
+﻿using nyms.resident.server.Models.Core;
 using nyms.resident.server.Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Security.Principal;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http.Filters;
 
 namespace nyms.resident.server.Filters
@@ -95,68 +88,3 @@ namespace nyms.resident.server.Filters
 
 
 
-
-
-
-
-
-
-
-
-
-
- 
-/*        protected Task<IPrincipal> AuthJwtToken(string token)
-        {
-            string username;
-
-            if (ValidateToken(token, out username))
-            {
-                //to get more information from DB in order to build local identity based on username 
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, username)
-                    // you can add more claims if needed like Roles ( Admin or normal user or something else)
-                };
-
-                var identity = new ClaimsIdentity(claims, "Jwt");
-                IPrincipal user = new ClaimsPrincipal(identity);
-
-                return Task.FromResult(user);
-            }
-
-            return Task.FromResult<IPrincipal>(null);
-        }*/
-
-        /*private static bool ValidateToken(string token, out string username)
-        {
-            username = null;
-            var simplePrinciple = JwtService.GetPrincipal(token);
-            if (simplePrinciple == null)
-                return false;
-            var identity = simplePrinciple.Identity as ClaimsIdentity;
-
-            if (identity == null)
-                return false;
-
-            if (!identity.IsAuthenticated)
-                return false;
-
-            var usernameClaim = identity.FindFirst(ClaimTypes.Name);
-            username = usernameClaim?.Value;
-
-            if (string.IsNullOrEmpty(username))
-                return false;
-
-            // You can implement more validation to check whether username exists in your DB or not or something else. 
-            var refIdClaim = identity.FindFirst("ReferenceId");
-            var refId = refIdClaim?.Value;
-            var dbUser = ""; // _userService.getUserByReferenceId(refId);
-                             // if user.roles.contains['Admin' or [manager]] then return true else false
-            *//*            if (username == "mnalliah")
-                        {
-                            return true;
-                        }*//*
-
-            return true;
-        }*/

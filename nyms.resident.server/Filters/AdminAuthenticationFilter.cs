@@ -1,8 +1,6 @@
 ﻿using nyms.resident.server.Models.Core;
-using nyms.resident.server.Services.Core;
 using nyms.resident.server.Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -10,7 +8,6 @@ using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http.Filters;
 
 namespace nyms.resident.server.Filters
